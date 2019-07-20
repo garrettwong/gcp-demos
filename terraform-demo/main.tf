@@ -1,6 +1,6 @@
 locals {
   project_id = "${var.project_id}"
-  location = "${var.location}"
+  location   = "${var.location}"
 }
 
 /******************************************
@@ -13,6 +13,12 @@ provider "google" {
 
 resource "random_id" "bucket_suffix" {
   byte_length = 6
+}
+
+resource "google_project_iam_member" "project" {
+  project = "${local.project_id}"
+  role    = "roles/owner"
+  member  = "user:garrettwong@example.com"
 }
 
 resource "google_storage_bucket" "image-store" {
