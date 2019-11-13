@@ -5,31 +5,32 @@ A simple set of demos, showcasing a few use cases around using terraform-validat
 1. All GCS buckets deployed SHALL NOT be in the US
 2. (TBD)
 
+## Prerequisites
+
+1. Terraform v0.12.x
+
 ## Getting Started
 
-1. Set your your application-default credentials to an account that has access to provision via terraform
+```bash
+# 1. Set your your application-default credentials to an account that has access to provision via terraform
+gcloud auth application-default login
+PROJECT_ID="sandbox-0700"
 
-    ```gcloud auth application-default login```
+# 2. Initialize Terraform resources and modules
+terraform init
 
-2. Initialize Terraform resources and modules
+# 3. Run Terraform Plan with an -out param
+terraform plan -var-file="terraform.tfvars" -out my.tfplan
 
-    ```terraform init```
+# 4. **Run Terraform Validator**
+terraform-validator validate my.tfplan --project $PROJECT_ID --policy-path=../policy-library
 
-3. Run Terraform Plan with an -out param
+# 5. Run Terraform Apply
+terraform apply my.tfplan
 
-    ```terraform plan -var-file="terraform.tfvars" -out my.tfplan```
-
-4. **Run Terraform Validator**
-
-    ```terraform-validator validate my.tfplan --project $PROJECT_ID --policy-path=../policy-library```
-
-5. Run Terraform Apply
-
-    ```terraform-apply my.tfplan```
-
-6. Verify
-
-    ```gsutil ls -p devops-1ca6```
+# 6. Verify
+gsutil ls -p $PROJECT_ID
+```
 
 ## Updating a Constraint
 

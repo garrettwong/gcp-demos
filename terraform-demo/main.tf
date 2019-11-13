@@ -1,14 +1,9 @@
-locals {
-  project_id = "${var.project_id}"
-  location   = "${var.location}"
-}
-
 /******************************************
   Provider configuration
  *****************************************/
 provider "google" {
   # run provider as user
-  project = "${local.project_id}"
+  project = "${var.project_id}"
 }
 
 resource "random_id" "bucket_suffix" {
@@ -17,7 +12,7 @@ resource "random_id" "bucket_suffix" {
 
 /* iam_restrict_role: no roles/owner */
 resource "google_project_iam_member" "project" {
-  project = "${local.project_id}"
+  project = "${var.project_id}"
   role    = "roles/owner"
   member  = "user:garrettwong@example.com"
 }
@@ -26,7 +21,7 @@ resource "google_project_iam_member" "project" {
 /* storage_location: buckets only allowed in asia-southeast1 */
 resource "google_storage_bucket" "image-store" {
   name     = "${format("%s-%s", "demo-bucket", element(random_id.bucket_suffix.*.hex, count.index))}"
-  location = "${local.location}"
+  location = "${var.location}"
 
   website {
     main_page_suffix = "index.html"
@@ -36,5 +31,3 @@ resource "google_storage_bucket" "image-store" {
 output "google_storage_bucket_image-store" {
   value = "${google_storage_bucket.image-store.name}"
 }
-
-/* ./ storage_location: buckets only allowed in asia-southeast1 */
