@@ -13,5 +13,5 @@ spec:
     mode: blacklist
     role: roles/owner
     members:
-    - "user:*@example.com"
-    - "group:*@example.com"
+    - "user:*@gwongcloud.com"
+    - "group:*@gwongcloud.com"
