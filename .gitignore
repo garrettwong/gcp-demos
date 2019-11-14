@@ -4,3 +4,8 @@ sa-key.json
 .tfstate.backup
 .tfplan
 
+
+terraform12-validator-demo/my.tfplan
+terraform12-validator-demo/my.tfplan.json
+terraform12-validator-demo/terraform
+terraform12-validator-demo/terraform-validator-darwin-amd64
