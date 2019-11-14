@@ -4,4 +4,3 @@ sa-key.json
 .tfstate.backup
 .tfplan
 
-terraform*
