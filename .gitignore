@@ -3,3 +3,5 @@ sa-key.json
 .tfstate
 .tfstate.backup
 .tfplan
+
+terraform*
