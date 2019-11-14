@@ -24,4 +24,4 @@ spec:
   parameters:
     mode: "blacklist"
     instances:
-      - //compute.googleapis.com/projects/clgx-tsg-aus2-poc-6af6/global/firewalls/allow-rdp
+      - //compute.googleapis.com/projects/sandbox-0700/global/firewalls/allow-rdp

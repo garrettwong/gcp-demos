@@ -1,0 +1,74 @@
+I, [2019-11-14T10:01:17.907815 #87881]  INFO -- Kitchen: -----> Starting Kitchen (v2.3.3)
+I, [2019-11-14T10:01:20.771134 #87881]  INFO -- Kitchen: -----> Verifying <verify-gcs>...
+W, [2019-11-14T10:01:33.055317 #87881]  WARN -- Kitchen: Running command `terraform output -json` in directory /Users/garrettwong/Git/gcp-demos/gcs-kitchen-and-inspec
+E, [2019-11-14T10:01:55.975639 #87881] ERROR -- Kitchen: ------Exception-------
+E, [2019-11-14T10:01:55.975930 #87881] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2019-11-14T10:01:55.975975 #87881] ERROR -- Kitchen: Message: 1 actions failed.
+>>>>>>     Verify failed on instance <verify-gcs>.  Please see .kitchen/logs/verify-gcs.log for more details
+E, [2019-11-14T10:01:55.975997 #87881] ERROR -- Kitchen: ----------------------
+E, [2019-11-14T10:01:55.976016 #87881] ERROR -- Kitchen: ------Backtrace-------
+E, [2019-11-14T10:01:55.976032 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:184:in `report_errors'
+E, [2019-11-14T10:01:55.976048 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:175:in `run_action'
+E, [2019-11-14T10:01:55.976065 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command/action.rb:36:in `block in call'
+E, [2019-11-14T10:01:55.976080 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2019-11-14T10:01:55.976103 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command/action.rb:34:in `call'
+E, [2019-11-14T10:01:55.976134 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/cli.rb:52:in `perform'
+E, [2019-11-14T10:01:55.976153 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/cli.rb:198:in `block (2 levels) in <class:CLI>'
+E, [2019-11-14T10:01:55.976169 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/thor-0.20.3/lib/thor/command.rb:27:in `run'
+E, [2019-11-14T10:01:55.976184 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/thor-0.20.3/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2019-11-14T10:01:55.976199 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/thor-0.20.3/lib/thor.rb:387:in `dispatch'
+E, [2019-11-14T10:01:55.976215 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/thor-0.20.3/lib/thor/base.rb:466:in `start'
+E, [2019-11-14T10:01:55.976230 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/bin/kitchen:13:in `block in <top (required)>'
+E, [2019-11-14T10:01:55.976245 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2019-11-14T10:01:55.976260 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/bin/kitchen:13:in `<top (required)>'
+E, [2019-11-14T10:01:55.976282 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/bin/kitchen:23:in `load'
+E, [2019-11-14T10:01:55.976300 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/bin/kitchen:23:in `<main>'
+E, [2019-11-14T10:01:55.976318 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:24:in `eval'
+E, [2019-11-14T10:01:55.976335 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:24:in `<main>'
+E, [2019-11-14T10:01:55.976352 #87881] ERROR -- Kitchen: ----End Backtrace-----
+E, [2019-11-14T10:01:55.976368 #87881] ERROR -- Kitchen: -Composite Exception--
+E, [2019-11-14T10:01:55.976385 #87881] ERROR -- Kitchen: Class: Kitchen::InstanceFailure
+E, [2019-11-14T10:01:55.976401 #87881] ERROR -- Kitchen: Message: Verify failed on instance <verify-gcs>.  Please see .kitchen/logs/verify-gcs.log for more details
+E, [2019-11-14T10:01:55.976417 #87881] ERROR -- Kitchen: ----------------------
+E, [2019-11-14T10:01:55.976447 #87881] ERROR -- Kitchen: ------Backtrace-------
+E, [2019-11-14T10:01:55.976462 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/kitchen-terraform-5.1.1/lib/kitchen/verifier/terraform.rb:109:in `rescue in call'
+E, [2019-11-14T10:01:55.976479 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/kitchen-terraform-5.1.1/lib/kitchen/verifier/terraform.rb:103:in `call'
+E, [2019-11-14T10:01:55.976492 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:459:in `block in verify_action'
+E, [2019-11-14T10:01:55.976504 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:552:in `synchronize_or_call'
+E, [2019-11-14T10:01:55.976517 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:514:in `block in action'
+E, [2019-11-14T10:01:55.976529 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2019-11-14T10:01:55.976541 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:513:in `action'
+E, [2019-11-14T10:01:55.976553 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:451:in `verify_action'
+E, [2019-11-14T10:01:55.976575 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-11-14T10:01:55.976588 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-11-14T10:01:55.976601 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-11-14T10:01:55.976615 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:380:in `each'
+E, [2019-11-14T10:01:55.976628 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-11-14T10:01:55.976640 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:162:in `verify'
+E, [2019-11-14T10:01:55.976653 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:198:in `public_send'
+E, [2019-11-14T10:01:55.976665 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:198:in `run_action_in_thread'
+E, [2019-11-14T10:01:55.976677 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-11-14T10:01:55.976689 #87881] ERROR -- Kitchen: ----End Backtrace-----
+E, [2019-11-14T10:01:55.976701 #87881] ERROR -- Kitchen: ---Nested Exception---
+E, [2019-11-14T10:01:55.976713 #87881] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2019-11-14T10:01:55.976725 #87881] ERROR -- Kitchen: Message: system: InSpec Runner exited with 1
+E, [2019-11-14T10:01:55.976737 #87881] ERROR -- Kitchen: ----------------------
+E, [2019-11-14T10:01:55.976749 #87881] ERROR -- Kitchen: ------Backtrace-------
+E, [2019-11-14T10:01:55.976764 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/kitchen-terraform-5.1.1/lib/kitchen/verifier/terraform.rb:109:in `rescue in call'
+E, [2019-11-14T10:01:55.976776 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/kitchen-terraform-5.1.1/lib/kitchen/verifier/terraform.rb:103:in `call'
+E, [2019-11-14T10:01:55.976788 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:459:in `block in verify_action'
+E, [2019-11-14T10:01:55.976801 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:552:in `synchronize_or_call'
+E, [2019-11-14T10:01:55.976831 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:514:in `block in action'
+E, [2019-11-14T10:01:55.976845 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2019-11-14T10:01:55.976857 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:513:in `action'
+E, [2019-11-14T10:01:55.976870 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:451:in `verify_action'
+E, [2019-11-14T10:01:55.976882 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-11-14T10:01:55.976894 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-11-14T10:01:55.976917 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-11-14T10:01:55.976930 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:380:in `each'
+E, [2019-11-14T10:01:55.976942 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-11-14T10:01:55.976954 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:162:in `verify'
+E, [2019-11-14T10:01:55.976966 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:198:in `public_send'
+E, [2019-11-14T10:01:55.976978 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:198:in `run_action_in_thread'
+E, [2019-11-14T10:01:55.976990 #87881] ERROR -- Kitchen: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-11-14T10:01:55.977002 #87881] ERROR -- Kitchen: ----End Backtrace-----

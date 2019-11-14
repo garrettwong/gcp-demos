@@ -1,0 +1,51 @@
+I, [2019-11-14T10:01:20.771225 #87881]  INFO -- verify-gcs: -----> Verifying <verify-gcs>...
+W, [2019-11-14T10:01:20.771608 #87881]  WARN -- verify-gcs: Running command `terraform workspace select kitchen-terraform-verify-gcs` in directory /Users/garrettwong/Git/gcp-demos/gcs-kitchen-and-inspec
+W, [2019-11-14T10:01:52.492262 #87881]  WARN -- verify-gcs: DEPRECATION: InSpec Attributes are being renamed to InSpec Inputs to avoid confusion with Chef Attributes. Use :inputs in your kitchen.yml verifier config instead of :attributes.
+I, [2019-11-14T10:01:52.493031 #87881]  INFO -- verify-gcs: system: Verifying
+E, [2019-11-14T10:01:55.974066 #87881] ERROR -- verify-gcs: Verify failed on instance <verify-gcs>.
+E, [2019-11-14T10:01:55.974198 #87881] ERROR -- verify-gcs: ------Exception-------
+E, [2019-11-14T10:01:55.974236 #87881] ERROR -- verify-gcs: Class: Kitchen::ActionFailed
+E, [2019-11-14T10:01:55.974264 #87881] ERROR -- verify-gcs: Message: system: InSpec Runner exited with 1
+E, [2019-11-14T10:01:55.974285 #87881] ERROR -- verify-gcs: ----------------------
+E, [2019-11-14T10:01:55.974301 #87881] ERROR -- verify-gcs: ------Backtrace-------
+E, [2019-11-14T10:01:55.974317 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/kitchen-terraform-5.1.1/lib/kitchen/verifier/terraform.rb:109:in `rescue in call'
+E, [2019-11-14T10:01:55.974333 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/kitchen-terraform-5.1.1/lib/kitchen/verifier/terraform.rb:103:in `call'
+E, [2019-11-14T10:01:55.974348 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:459:in `block in verify_action'
+E, [2019-11-14T10:01:55.974363 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:552:in `synchronize_or_call'
+E, [2019-11-14T10:01:55.974378 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:514:in `block in action'
+E, [2019-11-14T10:01:55.974393 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2019-11-14T10:01:55.974409 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:513:in `action'
+E, [2019-11-14T10:01:55.974424 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:451:in `verify_action'
+E, [2019-11-14T10:01:55.974439 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-11-14T10:01:55.974468 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-11-14T10:01:55.974485 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-11-14T10:01:55.974499 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:380:in `each'
+E, [2019-11-14T10:01:55.974515 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-11-14T10:01:55.974530 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:162:in `verify'
+E, [2019-11-14T10:01:55.974544 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:198:in `public_send'
+E, [2019-11-14T10:01:55.974559 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:198:in `run_action_in_thread'
+E, [2019-11-14T10:01:55.974574 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-11-14T10:01:55.974618 #87881] ERROR -- verify-gcs: ----End Backtrace-----
+E, [2019-11-14T10:01:55.974632 #87881] ERROR -- verify-gcs: ---Nested Exception---
+E, [2019-11-14T10:01:55.974644 #87881] ERROR -- verify-gcs: Class: Kitchen::Terraform::Error
+E, [2019-11-14T10:01:55.974655 #87881] ERROR -- verify-gcs: Message: system: InSpec Runner exited with 1
+E, [2019-11-14T10:01:55.974667 #87881] ERROR -- verify-gcs: ----------------------
+E, [2019-11-14T10:01:55.974678 #87881] ERROR -- verify-gcs: ------Backtrace-------
+E, [2019-11-14T10:01:55.974689 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/kitchen-terraform-5.1.1/lib/kitchen/verifier/terraform.rb:109:in `rescue in call'
+E, [2019-11-14T10:01:55.974701 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/kitchen-terraform-5.1.1/lib/kitchen/verifier/terraform.rb:103:in `call'
+E, [2019-11-14T10:01:55.974712 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:459:in `block in verify_action'
+E, [2019-11-14T10:01:55.974724 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:552:in `synchronize_or_call'
+E, [2019-11-14T10:01:55.974736 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:514:in `block in action'
+E, [2019-11-14T10:01:55.974748 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2019-11-14T10:01:55.974759 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:513:in `action'
+E, [2019-11-14T10:01:55.974771 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:451:in `verify_action'
+E, [2019-11-14T10:01:55.974783 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-11-14T10:01:55.974794 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-11-14T10:01:55.974806 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-11-14T10:01:55.974818 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:380:in `each'
+E, [2019-11-14T10:01:55.974830 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-11-14T10:01:55.974841 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/instance.rb:162:in `verify'
+E, [2019-11-14T10:01:55.974853 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:198:in `public_send'
+E, [2019-11-14T10:01:55.974865 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:198:in `run_action_in_thread'
+E, [2019-11-14T10:01:55.974876 #87881] ERROR -- verify-gcs: /Users/garrettwong/.rvm/gems/ruby-2.4.1/gems/test-kitchen-2.3.3/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-11-14T10:01:55.974902 #87881] ERROR -- verify-gcs: ----End Backtrace-----

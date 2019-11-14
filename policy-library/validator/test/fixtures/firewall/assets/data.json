@@ -1,5 +1,5 @@
 {
-    "name": "//compute.googleapis.com/projects/clgx-tsg-aus2-poc-6af6/global/firewalls/allow-rdp",
+    "name": "//compute.googleapis.com/projects/sandbox-0700/global/firewalls/allow-rdp",
     "asset_type": "compute.googleapis.com/Firewall",
     "resource": {
         "version": "v1",
@@ -20,9 +20,9 @@
                 "enable": false
             },
             "name": "allow-rdp",
-            "network": "https://www.googleapis.com/compute/v1/projects/clgx-tsg-aus2-poc-6af6/global/networks/migration-test",
+            "network": "https://www.googleapis.com/compute/v1/projects/sandbox-0700/global/networks/migration-test",
             "priority": 998,
-            "selfLink": "https://www.googleapis.com/compute/v1/projects/clgx-tsg-aus2-poc-6af6/global/firewalls/allow-rdp",
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/sandbox-0700/global/firewalls/allow-rdp",
             "sourceRange": ["203.8.16.0/23"]
         }
     }
