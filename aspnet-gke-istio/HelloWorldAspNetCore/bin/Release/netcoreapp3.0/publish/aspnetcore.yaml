@@ -1,0 +1,19 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: aspnetcore-v2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aspnetcore
+        version: v2
+    spec:
+      containers:
+      - name: aspnetcore
+        image: gcr.io/devops-shared-vpc/hello-dotnet:v2
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
