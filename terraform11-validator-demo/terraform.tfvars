@@ -7,7 +7,7 @@ project_id = "sandbox-0700"
 role_to_assign = "roles/editor"
 
 # storage_location: BLACKLIST "US"
-# location = "US"
+location = "US"
 
 # storage_location: ALLOW others
-location = "asia-southeast1"
+# location = "us-central1-southeast1"

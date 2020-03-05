@@ -1,15 +1,25 @@
-# Terraform - Config Validator Demo
+# Terraform Validator Demo
 
-A simple set of demos, showcasing a few use cases around using terraform-validator:
+Demo, showcasing how to leverage terraform-validator in a simple bash pipeline.  This demo targets usage with terraform v0.11.x and the associated terraform-validator version.
+
+## Scenarios
 
 1. All GCS buckets deployed SHALL NOT be in the US
 2. (TBD)
 
 ## Prerequisites
 
-1. Terraform v0.12.x
+1. Terraform v0.11.x
+2. terraform-validator
 
 ## Getting Started
+
+Install terraform-validator for terraform v0.11.x:
+
+```bash
+gsutil cp gs://terraform-validator/releases/2019-03-28/terraform-validator-darwin-amd64 .
+chmod +x terraaform-validator-darwin-amd64
+```
 
 ```bash
 # 1. Set your your application-default credentials to an account that has access to provision via terraform
@@ -23,16 +33,29 @@ terraform init
 terraform plan -var-file="terraform.tfvars" -out my.tfplan
 
 # 4. **Run Terraform Validator**
-terraform-validator validate my.tfplan --project $PROJECT_ID --policy-path=../policy-library
+./terraform-validator-darwin-amd64 validate my.tfplan --project $PROJECT_ID --policy-path=../policy-library
 
-# 5. Run Terraform Apply
+# 5. Update the terraform.tfvars file
+
+Location = "US" has been blacklisted and will be reported as a violation.
+
+In order to bypass this, deploy the resource in an alternative region, for example, "asia-southeast1".  You can comment out line, location="US", and uncomment the line location="asia-southeast1"
+
+# storage_location: BLACKLIST "US"
+location = "US"
+
+# storage_location: ALLOW others
+# location = "asia-southeast1"
+
+# 6. Run Terraform Apply
 terraform apply my.tfplan
 
 # 6. Verify
+
 gsutil ls -p $PROJECT_ID
 ```
 
-## Demo
+## Demo Scripts
 
 ```bash
 # 1. Update terraform.tfvars
@@ -40,11 +63,11 @@ gsutil ls -p $PROJECT_ID
 # 2. Set your gcloud config project id (This is only for running the run_to_* scripts)
 PROJECT_ID="[YOUR_PROJECT_ID]"
 gcloud config set project $PROJECT_ID
-./run_to_validate.sh
-./run_to_apply.sh
+./tf_validate.sh
+./tf_apply.sh
 ```
 
-## Updating a Constraint
+## Demo: Updating Constraints
 
 1. Constraints are located in the ../../policy-library - WHERE do we get this?
 
