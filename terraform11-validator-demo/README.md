@@ -36,22 +36,17 @@ terraform plan -var-file="terraform.tfvars" -out my.tfplan
 ./terraform-validator-darwin-amd64 validate my.tfplan --project $PROJECT_ID --policy-path=../policy-library
 
 # 5. Update the terraform.tfvars file
-
 Location = "US" has been blacklisted and will be reported as a violation.
 
-In order to bypass this, deploy the resource in an alternative region, for example, "asia-southeast1".  You can comment out line, location="US", and uncomment the line location="asia-southeast1"
+In order to bypass this, deploy the resource in an alternative region, for example, "asia-southeast1".  
 
-# storage_location: BLACKLIST "US"
-location = "US"
-
-# storage_location: ALLOW others
-# location = "asia-southeast1"
+To pass terraform-validator, comment out line, location="US",
+and uncomment the line location="asia-southeast1"
 
 # 6. Run Terraform Apply
 terraform apply my.tfplan
 
 # 6. Verify
-
 gsutil ls -p $PROJECT_ID
 ```
 
