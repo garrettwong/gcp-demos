@@ -1,0 +1,13 @@
+{
+  "description": "Readonly access to Protect for GKE resources.",
+  "etag": "AA==",
+  "includedPermissions": [
+    "containersecurity.clusterSummaries.list",
+    "containersecurity.workloadConfigAudits.list",
+    "resourcemanager.projects.get",
+    "resourcemanager.projects.list"
+  ],
+  "name": "roles/containersecurity.viewer",
+  "stage": "BETA",
+  "title": "GKE Protect Viewer"
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Limited read access to Fleet Engine Delivery resources",
+  "etag": "AA==",
+  "includedPermissions": [
+    "fleetengine.tasks.searchWithTrackingId"
+  ],
+  "name": "roles/fleetengine.deliveryConsumer",
+  "stage": "GA",
+  "title": "Fleet Engine Delivery Consumer User"
+}
