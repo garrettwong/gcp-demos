@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'Terraform via WIF'
 
 on:
   push:
@@ -34,8 +34,8 @@ jobs:
       with:
         # token_format: 'access_token'
         create_credentials_file: true
-        workload_identity_provider: 'projects/1092380939282/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-        service_account: 'my-service-account@gwc-wif.iam.gserviceaccount.com'
+        workload_identity_provider: 'projects/${{ secrets.PROJECT_NUMBER }}/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+        service_account: 'my-service-account@${{ secrets.PROJECT_ID }}.iam.gserviceaccount.com'
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
