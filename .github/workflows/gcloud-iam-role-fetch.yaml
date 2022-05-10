@@ -1,8 +1,5 @@
 name: GCLOUD
-on: 
-  push:
-    branches:
-    - iamroles
+on: workflow_dispatch
 jobs:
   iam_role_fetch:
     runs-on: 'ubuntu-latest'
