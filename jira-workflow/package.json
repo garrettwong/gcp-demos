@@ -1,0 +1,17 @@
+{
+  "name": "jira-workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "log4js": "^6.4.6",
+    "request": "^2.88.2",
+    "requests": "^0.3.0"
+  }
+}

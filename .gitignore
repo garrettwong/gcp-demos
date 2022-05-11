@@ -1,4 +1,6 @@
+JIRA.API_KEY
 JIRA.SECRET
+
 .terraform
 sa-key.json
 .tfstate
