@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = GCPFunctionsX
+build_property.ProjectDir = /Users/garrettwong/Git/gcp-demos/gcp-instance-remediation-function/
