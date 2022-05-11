@@ -1,5 +1,8 @@
 const fs = require('fs')
 const request = require('request')
+const JiraService = require('./lib/jira-service')
+const JIRATemplates = require('./lib/jira-templates')
+const util = require('util')
 
 function configureLogger() {
   const log4js = require('log4js')
@@ -17,24 +20,24 @@ function configureLogger() {
 
 function main() {
   let logger = configureLogger()
-
   logger.debug('Beginning Execution')
 
-  let options = {
-    method: 'GET',
-    url: 'https://gwongclouddev.atlassian.net/rest/api/2/search',
-    headers: {
-      'cache-control': 'no-cache',
-      authorization: process.env.AUTH_SECRET
-    },
-  }
+  let jiraService = new JiraService(process.env.AUTH_SECRET)
 
-  request(options, function (error, response, body) {
-    if (error) throw new Error(error)
+  // jiraService.getJiras(function (error, response, body) {
+  //   if (error) throw new Error(error)
 
-    console.log("Body", body)
-    logger.debug(JSON.stringify(body))
-  })
+  //   logger.debug(JSON.stringify(body))
+  // })
+
+  // let res = jiraService.getJira('GOOG-1')
+  // res.then(function(response) {
+  //   logger.debug(response)
+  //   console.log(util.inspect(response.data))
+  // })
+
+  let data = JIRATemplates.default
+  jiraService.createJira(data)
 }
 
 if (require.main === module) {
