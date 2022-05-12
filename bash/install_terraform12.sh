@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-### AS OF August 6, 2019, gwcx recommends Terraform v0.11.14.  v0.12.x has breaking changes.  Use at your own risk.
+### AS OF August 6, 2019, gwc recommends Terraform v0.11.14.  v0.12.x has breaking changes.  Use at your own risk.
 
 function install_terraform12() {
     sudo apt-get install unzip
